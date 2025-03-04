@@ -47,7 +47,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 10px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 0.75rem;
@@ -62,7 +61,6 @@ body {
 
 .logo img {
     max-width: 150px;
-    margin-top: 5px;
 }
 
 /* Menu de Navegação */
@@ -123,10 +121,6 @@ body {
     .nav-list {
         flex-direction: column;
         gap: 10px;
-    }
-
-    .cta-button {
-        margin-top: 15px;
     }
 }
 
@@ -498,7 +492,6 @@ h2.block.title {
 /* Logo e Redes Sociais */
 .logo img {
     max-width: 150px;
-    margin-bottom: 1rem;
 }
 
 .social-icons {
