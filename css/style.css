@@ -10,11 +10,11 @@
     --neutral-very-light-gray: #fafafa; /* hsl(0, 0%, 98%) */
 
     /* Tipografia */
-    --font-size-body: 16px; /* Tamanho da fonte do corpo */
-    --font-family: 'Be Vietnam Pro', sans-serif; /* Família da fonte */
-    --font-weight-regular: 400; /* Peso da fonte regular */
-    --font-weight-medium: 500; /* Peso da fonte médio */
-    --font-weight-bold: 700; /* Peso da fonte negrito */
+    --font-size-body: 16px;
+    --font-family: 'Be Vietnam Pro', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
 }
 
 /* Reset básico */
@@ -25,14 +25,20 @@
 }
 
 body {
-    font-family: var(--font-family); /* Usando a variável de fonte definida no :root */
+    font-family: var(--font-family);
     line-height: 1.6;
-    color: var(--neutral-very-dark-blue); /* Cor de texto padrão */
+    color: var(--neutral-very-dark-blue);
+    background-color: var(--neutral-very-light-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
 }
 
 /* Estilos do Header */
 .header {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -42,23 +48,20 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 20px 10px;
-    background-color: #fff; /* Cor de fundo do header */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 0.75rem;
-
-
 }
 
 /* Logo */
-
 .logo {
     display: flex;
     align-items: center;
     text-align: center;
 }
-.logo img {
 
-    max-width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+.logo img {
+    max-width: 150px;
     margin-top: 5px;
 }
 
@@ -72,23 +75,23 @@ body {
 .nav-list {
     list-style: none;
     display: flex;
-    gap: 20px; /* Espaçamento entre os itens do menu */
+    gap: 20px;
 }
 
 .nav-list li a {
     text-decoration: none;
-    color: #333; /* Cor do texto */
+    color: #333;
     font-weight: var(--font-weight-bold);
     transition: color 0.3s ease;
 }
 
 .nav-list li a:hover {
-    color: #f25f3a; /* Cor ao passar o mouse */
+    color: #f25f3a;
 }
 
 /* Botão */
 .cta-button .btn {
-    background-color: #f25f3a; /* Cor do botão */
+    background-color: #f25f3a;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -101,10 +104,10 @@ body {
 }
 
 .cta-button .btn:hover {
-    background-color: #e64a2e; /* Cor ao passar o mouse */
+    background-color: #e64a2e;
 }
 
-/* Responsividade */
+/* Responsividade do Header */
 @media (max-width: 970px) {
     .header {
         flex-direction: column;
@@ -126,10 +129,12 @@ body {
     }
 }
 
+/* Banner */
 .banner {
-    padding: 2rem;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem;
 }
 
 .banner-content {
@@ -178,7 +183,7 @@ body {
     height: auto;
 }
 
-/* Layout responsivo */
+/* Responsividade do Banner */
 @media (max-width: 768px) {
     .banner-content {
         flex-direction: column-reverse;
@@ -202,5 +207,111 @@ body {
 
     .banner-greeting {
         max-width: 50%;
+    }
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centraliza o grid */
+}
+
+/* Estilos gerais para os blocos */
+.block {
+    border: 1px solid var(--neutral-very-pale-red);
+    padding: 1.5rem;
+    border-radius: 8px;
+    /* background-color: var(--neutral-very-light-gray); */
+}
+
+.block.col-1{
+    border: 1px solid var(--neutral-very-pale-red);
+    padding: 1.5rem;
+    border-radius: 8px;
+    /* background-color: var(--neutral-very-light-gray); */
+    max-height: 24em;
+}
+
+.block h2 {
+    font-size: 1.5rem;
+    color: var(--primary-dark-blue);
+    margin-bottom: 1rem;
+    font-weight: var(--font-weight-bold);
+}
+
+/* Estilo específico para o título com a classe .block.title */
+h2.block.title {
+    font-size: 2rem;
+    color: var(--primary-dark-blue);
+}
+
+.block p {
+    font-size: 18px;
+    line-height: 1;
+    color: var(--primary-dark-blue);
+}
+
+/* Estilo para o <span> dentro de <h2> nos blocos .col-2 */
+.block.col-2 h2 span {
+    display: inline-block; /* Permite aplicar padding e margin */
+    background-color: var(--primary-bright-red); /* Cor laranja */
+    color: white; /* Cor do texto */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    font-weight: var(--font-weight-bold); /* Fonte em negrito */
+    padding: 0.5rem 0.75rem; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    margin-right: 0.75rem; /* Espaçamento entre o span e o texto */
+    vertical-align: middle; /* Alinha verticalmente com o texto */
+}
+
+/* Estilo para o <h2> nos blocos .col-2 */
+.block.col-2 h2 {
+    font-size: 1.25rem; /* Tamanho da fonte do título */
+    color: var(--primary-dark-blue); /* Cor do texto */
+    margin-bottom: 1rem; /* Espaçamento inferior */
+    display: flex; /* Alinha o span e o texto horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Estilo para o <p> nos blocos .col-2 */
+.block.col-2 p {
+    font-size: 0.76rem; /* Tamanho da fonte do parágrafo */
+    color: var(--neutral-dark-grayish-blue); /* Cor do texto */
+    line-height: 1.5; /* Altura da linha */
+}
+
+/* Estilos para as colunas */
+.col-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+.col-2 {
+    grid-column: 2 / 3;
+}
+
+/* Responsividade do Grid */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .col-1 {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+
+    .col-2 {
+        grid-column: 1 / 2;
     }
 }
