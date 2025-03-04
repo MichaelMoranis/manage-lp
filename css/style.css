@@ -414,14 +414,23 @@ h2.block.title {
 }
 
 .pre-foot-btn-text {
-    color: var(--neutral-very-dark-blue);
+    color: var(--primary-dark-blue);
     background-color: var(--neutral-very-light-gray);
     padding: 0.65rem;
     border: none;
     border-radius: 18px;
     font-family: var(--font-family);
+    font-weight: var(--font-weight-bold);
     margin: 1rem;
 }
+
+.pre-foot-btn-text:hover {
+    color: var(--primary-bright-red);
+    background-color: var(--neutral-very-pale-red);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-bold);
+}
+
 
 @media (max-width: 768px) {
     .pre-foot {
