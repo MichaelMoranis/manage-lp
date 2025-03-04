@@ -29,3 +29,99 @@ body {
     line-height: 1.6;
     color: var(--neutral-very-dark-blue); /* Cor de texto padrão */
 }
+
+/* Estilos do Header */
+.header {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    background-color: #fff; /* Cor de fundo do header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 0.75rem;
+
+
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.logo img {
+
+    max-width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-top: 5px;
+}
+
+/* Menu de Navegação */
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens do menu */
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #333; /* Cor do texto */
+    font-weight: var(--font-weight-bold);
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #f25f3a; /* Cor ao passar o mouse */
+}
+
+/* Botão */
+.cta-button .btn {
+    background-color: #f25f3a; /* Cor do botão */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button .btn:hover {
+    background-color: #e64a2e; /* Cor ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        margin: 15px 0;
+        display: none;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta-button {
+        margin-top: 15px;
+    }
+}
