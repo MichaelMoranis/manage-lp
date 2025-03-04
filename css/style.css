@@ -1,0 +1,31 @@
+:root {
+    /* Cores Primárias */
+    --primary-bright-red: #f25f3a; /* hsl(12, 88%, 59%) */
+    --primary-dark-blue: #242d52; /* hsl(228, 39%, 23%) */
+
+    /* Cores Neutras */
+    --neutral-dark-grayish-blue: #9095a7; /* hsl(227, 12%, 61%) */
+    --neutral-very-dark-blue: #1d1e25; /* hsl(233, 12%, 13%) */
+    --neutral-very-pale-red: #ffefeb; /* hsl(13, 100%, 96%) */
+    --neutral-very-light-gray: #fafafa; /* hsl(0, 0%, 98%) */
+
+    /* Tipografia */
+    --font-size-body: 16px; /* Tamanho da fonte do corpo */
+    --font-family: 'Be Vietnam Pro', sans-serif; /* Família da fonte */
+    --font-weight-regular: 400; /* Peso da fonte regular */
+    --font-weight-medium: 500; /* Peso da fonte médio */
+    --font-weight-bold: 700; /* Peso da fonte negrito */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family); /* Usando a variável de fonte definida no :root */
+    line-height: 1.6;
+    color: var(--neutral-very-dark-blue); /* Cor de texto padrão */
+}
