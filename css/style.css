@@ -315,3 +315,79 @@ h2.block.title {
         grid-column: 1 / 2;
     }
 }
+
+/* Estilos da Seção */
+.team-section {
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 2rem;
+    background-color: var(--neutral-very-light-gray); /* Cor de fundo */
+}
+
+/* Título da Seção */
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-dark-blue);
+    margin-bottom: 2rem;
+    font-weight: var(--font-weight-bold);
+}
+
+/* Container dos Cards */
+.cards-container {
+    display: flex;
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 2rem; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha em telas menores */
+}
+
+/* Estilo do Card */
+.card {
+    background-color: white;
+    border: 1px solid var(--neutral-very-pale-red);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 30em; /* Largura fixa para cada card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Imagem de Perfil */
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Formato redondo */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+    margin-bottom: 1rem;
+}
+
+/* Nome do Perfil */
+.profile-name {
+    font-size: 1.25rem;
+    color: var(--primary-dark-blue);
+    margin-bottom: 0.5rem;
+    font-weight: var(--font-weight-bold);
+}
+
+/* Descrição do Perfil */
+.profile-description {
+    font-size: 0.9rem;
+    color: var(--neutral-dark-grayish-blue);
+    line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* Empilha os cards verticalmente em telas menores */
+        align-items: center; /* Centraliza os cards */
+    }
+
+    .card {
+        width: 100%; /* Ocupa a largura total em telas menores */
+        max-width: 100%; /* Limita a largura máxima */
+    }
+}
