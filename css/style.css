@@ -33,7 +33,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding: 2rem;
+    padding: 0.10em;
 }
 
 /* Estilos do Header */
@@ -87,6 +87,21 @@ body {
     color: #f25f3a;
 }
 
+/* Estilos do menu hamburguer */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color:black;
+    margin: 4px 0;
+}
+
+
 /* Botão */
 .cta-button .btn {
     background-color: #f25f3a;
@@ -123,6 +138,41 @@ body {
         gap: 10px;
     }
 }
+
+@media (max-width: 670px) {
+    .header {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(197, 19, 19, 0.1);
+    }
+    
+
+    .navbar {
+        display: none;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta-button .btn {
+        display: none;
+    }
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
 
 /* Banner */
 .banner {
@@ -180,6 +230,11 @@ body {
 
 /* Responsividade do Banner */
 @media (max-width: 768px) {
+     
+    .banner {
+        padding: 0.76em;
+    }
+
     .banner-content {
         flex-direction: column-reverse;
         justify-content: space-between;
@@ -211,7 +266,6 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, auto);
     gap: 1.5rem;
-    padding: 1.5rem;
     max-width: 1200px;
     width: 100%;
     background-color: white;
@@ -299,6 +353,7 @@ h2.block.title {
     .grid-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        width: 100%;
     }
 
     .col-1 {
@@ -308,6 +363,16 @@ h2.block.title {
 
     .col-2 {
         grid-column: 1 / 2;
+    }
+
+    .block.col-1 {
+        padding: 2px;
+        margin: 0.75em;
+    }
+
+    .block.col-2 {
+        padding: 2px;
+        margin: 0.75em;
     }
 }
 

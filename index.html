@@ -27,11 +27,15 @@
                 <li><a href="#">Community</a></li>
             </ul>
         </nav>
-
         <!-- Botão -->
         <div class="cta-button">
             <a href="#" class="btn">Get Started</a>
         </div>
+        <div class="hamburger-menu" onclick="toggleNav()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
     </div>
 </header>
 <section class="banner">
@@ -189,5 +193,13 @@
       <p>&copy; 2023 Empresa. Todos os direitos reservados.</p>
   </div>
 </footer>
+<script>
+  function toggleNav() {
+      const nav = document.querySelector('.navbar');
+      const about = document.querySelector('.about');
+      about.classList.toggle("active")
+      nav.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
